@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>Sum Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      width: 100px;
+      height: 30px;
+      font-size: 18px;
+      margin: 0 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 10px;
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
+      font-size: 18px;
+      background-color: #333;
+      color: #fff;
+      border: 0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sum Calculator</h1>
+
+  <p>Enter two numbers:</p>
+
+  <input type="number" id="num1">
+  <input type="number" id="num2">
+
+  <br><br>
+
+  <button onclick="calculateSum()">Calculate sum</button>
+
+  <br><br>
+
+  <p>The sum is: <span id="result"></span></p>
+
+  <script>
+    function calculateSum() {
+      var num1 = document.getElementById("num1").value;
+      var num2 = document.getElementById("num2").value;
+      var sum = parseInt(num1) + parseInt(num2);
+  document.getElementById("result").innerHTML = sum;
+}
+</script>
+
+</body>
+</html>
